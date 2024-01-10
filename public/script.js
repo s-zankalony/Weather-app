@@ -9,7 +9,7 @@ async function checkWeather(city) {
   
   //   const request = await axios.post("/api/v1", city);
   
-  const response = await axios.post("https://api.openweathermap.org/data/2.5/weather?units=metric&q=", { city });
+  const response = await axios.post("https://localhost:3000", { city });
 
   if (response.status == 404) {
     document.querySelector(".error").style.display = "block";
