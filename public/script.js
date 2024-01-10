@@ -1,6 +1,10 @@
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
+
+require("dotenv").config();
+
+
 async function checkWeather(city) {
   //   const request = await axios.post("/api/v1", city);
   // const deployUrl = "https://weather-app-murex-six.vercel.app/"
