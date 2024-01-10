@@ -3,8 +3,8 @@ const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
 async function checkWeather(city) {
   //   const request = await axios.post("/api/v1", city);
-  const deployUrl = "https://weather-app-murex-six.vercel.app/"
-  const response = await axios.post(deployUrl, { city });
+  // const deployUrl = "https://weather-app-murex-six.vercel.app/"
+  const response = await axios.post(process.env.OPEN_WEATHER_URI, { city });
 
   if (response.status == 404) {
     document.querySelector(".error").style.display = "block";
