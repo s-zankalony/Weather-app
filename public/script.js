@@ -6,10 +6,10 @@ const weatherIcon = document.querySelector(".weather-icon");
 
 
 async function checkWeather(city) {
-  import 'dotenv/config';
+  
   //   const request = await axios.post("/api/v1", city);
-  // const deployUrl = "https://weather-app-murex-six.vercel.app/"
-  const response = await axios.post(process.env.OPEN_WEATHER_URI, { city });
+  
+  const response = await axios.post("https://api.openweathermap.org/data/2.5/weather?units=metric&q=", { city });
 
   if (response.status == 404) {
     document.querySelector(".error").style.display = "block";
