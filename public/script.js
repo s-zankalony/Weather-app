@@ -9,7 +9,7 @@ async function checkWeather(city) {
   
   //   const request = await axios.post("/api/v1", city);
   
-  const response = await axios.post("https://localhost:3000", { city });
+  const response = await axios.get("/", { city });
 
   if (response.status == 404) {
     document.querySelector(".error").style.display = "block";
