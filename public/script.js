@@ -7,9 +7,9 @@ const weatherIcon = document.querySelector(".weather-icon");
 
 async function checkWeather(city) {
   
-  //   const request = await axios.post("/api/v1", city);
   
-  const response = await axios.get("/", { city });
+  
+  const response = await axios.get("http://localhost:3000/", { city });
 
   if (response.status == 404) {
     document.querySelector(".error").style.display = "block";
